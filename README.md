@@ -3,5 +3,5 @@ Durante meus estudos de HTML, CSS e Javascript, desenvolvi este projeto que util
 
 #### A imagem foi retirada do Freepik, ao qual dei os créditos na página.
 
-![Logo Github](assets/img/printscreen-page1.png)
-![Logo Github](assets/img/printscreen-page2.png)
+![Printscreen-page](assets/img/printscreen-page1.png)
+![other Printscreen-page](assets/img/printscreen-page2.png)
