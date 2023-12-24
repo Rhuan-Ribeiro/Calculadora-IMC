@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&family=Roboto+Slab:wght@900&display=swap');
+
+/* Paleta de Cores do photokit.com */
+:root {
+    --clr-itp-primary: #d3f2e3;
+    --clr-itp-1: #294042; 
+    --clr-itp-2: #d3f3e3; 
+    --clr-itp-3: #5adfa7; 
+    --clr-itp-4: #737f80; 
+    --clr-itp-5: #84a29a; 
+    --clr-itp-6: #a2abae; 
+    --clr-itp-7: #f4f7f7; 
+    --clr-itp-8: #728c84; 
+    --clr-itp-9: #a5c5b9; 
+    --clr-itp-10: #9fbcac; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Verdana, Tahoma, sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--clr-itp-7);
+}
+
+#container {
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+}
+
+
+#img img {
+    width: 32rem;
+}
+
+#img a {
+    color: var(--clr-itp-10);
+}
+
+#calculator {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    color: var(--clr-itp-1);
+    background-color: var(--clr-itp-2);
+    border-radius: 8px;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#title {
+    font-size: 2.2rem;
+    position: relative;
+}
+
+#title::after {
+    position: absolute;
+    content: '';
+    background-color: var(--clr-itp-3);
+    width: 9rem;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    border-radius: 3px;
+}
+
+.input-box label {
+    font-size: 1.1rem;
+    color: var(--clr-itp-1);
+    font-weight: 500;
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--clr-itp-9);
+    padding: 0.3rem;
+    border-radius: 3px;
+    margin-top: 3px;
+}
+
+.input-field span, .input-field i {
+    color: var(--clr-itp-8);
+    font-size: 1.3rem;
+    padding: 0.6rem 1rem;
+}
+
+.input-field input{
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    font-size: 1.3rem;
+    color: var(--clr-itp-1);
+    padding: 0 0.5rem;
+}
+
+.input-field input::-webkit-outer-spin-button,
+.input-field input::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+.input-field input:focus {
+    outline: none;
+}
+
+#calculate {
+    border: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    background-color: var(--clr-itp-3);
+    color: var(--clr-itp-1);
+    padding: 0.5rem 0;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#result {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    border-top: 1px solid var(--clr-itp-1);
+    padding: 0.75rem 0;
+    justify-content: space-evenly;
+}
+
+#bmi {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2.25rem;
+    background-color: var(--clr-itp-1);
+    padding: 0.2rem 0.65rem;
+    border-radius: 3px;
+}
+
+#bmi span:last-child {
+    font-size: 0.875rem;
+    color: var(--clr-itp-10);
+}
+
+#description {
+    width: 15.5rem;
+}
+
+#more-info {
+    border-top: 1px solid var(--clr-itp-1);
+    padding-top: 1.5rem;
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+#more-info a {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    color: var(--clr-itp-1);
+    gap: 0.6rem;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+#more-info a:hover {
+    color: var(--clr-itp-10);
+}
+
+#more-info a span {
+    position: relative;
+}
+
+#more-info a::after {
+    content: '';
+    display: block;
+    width: 0;
+    max-width: 100%; /* Largura máxima será o tamanho do texto */
+    height: 2px;
+    background-color: var(--clr-itp-10); /* Cor da barra */
+    position: absolute;
+    bottom: -5px; /* Ajuste a posição conforme necessário */
+    left: auto;
+    right: auto;
+    transition: width 0.3s ease; /* Tempo e tipo de transição */
+}
+
+#more-info a:hover::after {
+    width: 40%; /* A largura da barra será igual à largura do texto */
+}
+
+
+
+.hidden {
+    display: none;
+}
+
+.normal {
+    color: var(--clr-itp-3);
+}
+
+.attention {
+    color: #d32f2f;
+}   
+
+@media screen and (max-width: 1024px) {
+    #img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #container {
+        width: 100%;
+        height: 100%;
+    }
+
+    #calculator {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        justify-content: center;
+    }
+}
